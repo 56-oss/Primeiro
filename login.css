@@ -1,0 +1,129 @@
+:root{
+    --branco-principal: #f8f6f6;
+    --texto-branco: #ffffff;
+    --preto-de-fundo: #333;   
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+}
+
+.container-principal-2{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--preto-de-fundo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-div, .container-principal-2 a{
+    margin: 5px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.login-div{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@media(max-width: 720px){
+    .login-div{
+        width: 80%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+
+.form-div{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icon{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: var(--preto-de-fundo);
+    font-size: clamp(10px, 3vw, 30px);
+}
+
+
+h1, .icon{
+    margin: 0;
+}
+
+.icon, form{
+    margin: 5px;
+}
+
+.form-div form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-div form button{
+    width: 100%;
+    height: 50px;
+    background-color: var(--preto-de-fundo);
+    color: var(--texto-branco);
+    border: none;
+    border-radius: 5px;
+}
+
+.form-div form button:hover{
+    cursor: pointer;
+}
+
+.form-div form input{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 5px;
+    color: var(--preto-de-fundo);
+    outline: none;
+}
+
+.form-div form a{
+    text-decoration: none;
+    color: var(--preto-de-fundo);
+    font-weight: bolder;
+}
+
+

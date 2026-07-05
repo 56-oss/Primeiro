@@ -1,0 +1,328 @@
+:root {
+    --branco-principal: #f8f6f6;
+    --texto-branco: #ffffff;
+    --azul-de-fundo: #333;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background-color: var(--branco-principal);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow-y: hidden;
+    justify-content: center;
+    z-index: 1000;
+
+}
+
+.div1 {
+    width: 100%;
+    height: 60px;
+    background-color: var(--branco-principal);
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-div-1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    gap: 10px;
+    padding: 10px;
+}
+
+.nav-div-1 span {
+    background-color: var(--azul-de-fundo);
+    width: clamp(10px, 6vw, 40px);
+    height: clamp(10px, 6vw, 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: var(--texto-branco);
+    font-weight: bolder;
+    padding: 10px;
+    font-size: clamp(10px, 3vw, 20px);
+}
+
+.title {
+    width: 100%;
+    height: 50px;
+    background-color: var(--azul-de-fundo);
+    color: var(--texto-branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-div-1 a {
+    text-decoration: none;
+    color: var(--azul-de-fundo);
+    font-weight: bolder;
+}
+
+.nav-div-1 button {
+    color: var(--azul-de-fundo);
+    font-weight: bolder;
+    font-size: larger;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#aparecer {
+    width: 30%;
+    display: grid;
+    height: 200px;
+    flex-direction: column;
+    background-color: var(--branco-principal);
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    border: 1px solid var(--azul-de-fundo);
+    border-radius: 10px;
+    overflow-x: auto;
+    margin-top: 110px;
+    right: 10px;
+    overflow-y: auto;
+    position: fixed;
+    top: 10px;
+    z-index: 3;
+}
+
+#aparecer button {
+    background-color: transparent;
+    color: var(--azul-de-fundo);
+    font-weight: bolder;
+    border: none;
+    font-size: xx-large;
+    cursor: pointer;
+    position: fixed;
+}
+
+#aparecer ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#aparecer::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+#aparecer::-webkit-scrollbar-thumb {
+    background-color: var(--azul-de-fundo);
+    border-radius: 5px;
+}
+
+strong {
+    background-color: #ffffff;
+    font-size: clamp(10px, 4vw, 30px);
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    background-color: #f8f6f6;
+
+}
+
+strong,
+.card {
+    margin-top: 15px;
+}
+
+strong,
+header {
+    margin: 0;
+}
+
+li {
+    cursor: pointer;
+    padding: 1px;
+    list-style: none;
+    color: var(--azul-de-fundo);
+}
+
+.nav-div-2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 10px;
+
+}
+
+.uplo {
+    padding: 1px;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+
+.uplo a {
+    font-size: clamp(10px, 1vw, 30px);
+}
+
+
+.icon {
+    width: clamp(10px, 6vw, 40px);
+    height: clamp(10px, 6vw, 40px);
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    height: 500px;
+    background-color: var(--azul-de-fundo);
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    margin-top: 100px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: fade 15s infinite;
+}
+
+@media(max-width: 720px) {
+    .slide:nth-child(1) {
+        background-image: url(../Uploads/gemini-image-2_A_deer_made_entirely_of_autumn_leaves_—_head_body_legs_ears_tail_and_antlers_f-0.jpg);
+        animation-delay: 0s;
+    }
+
+    .slide:nth-child(2) {
+        background-image: url(../Uploads/gemini-image-2_A_highly_detailed_3D_realistic_cinematic_deep-sea_underwater_render_focusing_ent-0.jpg);
+        animation-delay: 5s;
+    }
+
+    .slide:nth-child(3) {
+        background-image: url(../Uploads/gravity\ falls.jpg);
+        animation-delay: 10s;
+    }
+}
+
+@media(min-width:720px) {
+    .slide:nth-child(1) {
+        background-image: url(../Uploads/images\ \(13\).jpeg);
+        animation-delay: 0s;
+    }
+
+    .slide:nth-child(2) {
+        background-image: url(../Uploads/images\ \(27\).jpeg);
+        animation-delay: 5s;
+    }
+
+    .slide:nth-child(3) {
+        background-image: url(../Uploads/images\ \(18\).jpeg);
+        animation-delay: 10s;
+    }
+}
+
+.header-content {
+    flex-direction: column;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    margin-top: 100px;
+}
+
+
+
+header h1 {
+    font-size: clamp(10px, 4vw, 30px);
+    height: 10px;
+    text-shadow: 5px 5px 5px #ffffff;
+
+}
+
+header h2 {
+    font-size: clamp(14px, 2vw, 30px);
+    text-shadow: 5px 5px 5px #ffffff;
+
+}
+
+header p {
+    font-size: clamp(10px, 4vw, 30px);
+    height: 10px;
+    text-shadow: 5px 5px 5px #ffffff;
+
+}
+
+.footer {
+    background-color: var(--azul-de-fundo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    position: fixed;
+}
